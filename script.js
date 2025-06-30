@@ -12,6 +12,7 @@ window.addEventListener('unhandledrejection', function(e) {
 const AppState = {
     currentScreen: 'main-menu',
     currentDifficulty: null,
+    currentLength: null, // short, medium, long
     currentCode: null,
     gameSession: null,
     gameTimer: null,
@@ -111,211 +112,37 @@ result
     }
 }
 
-// ===== 파이썬 코드 데이터 =====
-const PythonCodes = {
-    beginner: [
-        {
-            id: 'b1',
-            title: '기본 출력문',
-            code: 'print("Hello, World!")',
-            description: '파이썬의 가장 기본적인 출력문입니다.'
-        },
-        {
-            id: 'b2',
-            title: '변수 선언',
-            code: 'name = "Python"\nage = 30\nprint("프로그래밍 언어:", name)\nprint("출시 연도:", 2024 - age)',
-            description: '문자열과 숫자 변수를 선언하고 출력합니다.'
-        },
-        {
-            id: 'b3',
-            title: '숫자 계산',
-            code: 'a = 10\nb = 20\nresult = a + b\nprint(result)',
-            description: '간단한 덧셈 계산을 수행합니다.'
-        },
-        {
-            id: 'b4',
-            title: '문자열 연결',
-            code: 'first_name = "홍"\nlast_name = "길동"\nfull_name = first_name + last_name\nprint(full_name)',
-            description: '문자열을 연결하여 새로운 문자열을 만듭니다.'
-        },
-        {
-            id: 'b5',
-            title: '리스트 생성',
-            code: 'fruits = ["사과", "바나나", "오렌지"]\nprint("과일 목록:", fruits)\nprint("첫 번째 과일:", fruits[0])\nprint("총 과일 개수:", len(fruits))',
-            description: '리스트를 생성하고 다양한 정보를 출력합니다.'
-        },
-        {
-            id: 'b6',
-            title: '변수 활용',
-            code: 'name = "김파이썬"\nage = 25\nprint("안녕하세요, " + name + "님!")\nprint(f"당신의 나이는 {age}세입니다.")',
-            description: '변수를 활용하여 개인정보를 출력합니다.'
-        },
-        {
-            id: 'b7',
-            title: '주석 작성',
-            code: '# 이것은 주석입니다\nprint("Hello")  # 인라인 주석',
-            description: '코드에 주석을 추가하는 방법입니다.'
-        },
-        {
-            id: 'b8',
-            title: '여러 줄 출력',
-            code: 'print("첫 번째 줄")\nprint("두 번째 줄")\nprint("세 번째 줄")',
-            description: '여러 줄에 걸쳐 내용을 출력합니다.'
-        },
-        {
-            id: 'b9',
-            title: '길이 계산',
-            code: 'text = "Python Programming"\nlength = len(text)\nprint(f"문자열 길이: {length}")',
-            description: '문자열의 길이를 계산하고 f-string으로 출력합니다.'
-        },
-        {
-            id: 'b10',
-            title: '타입 확인',
-            code: 'number = 42\ntext = "Hello"\nmy_list = [1, 2, 3]\nprint(f"숫자 {number}의 타입: {type(number).__name__}")\nprint(f"문자열 \'{text}\'의 타입: {type(text).__name__}")\nprint(f"리스트 {my_list}의 타입: {type(my_list).__name__}")',
-            description: '다양한 변수의 데이터 타입을 확인합니다.'
-        }
-    ],
-    intermediate: [
-        {
-            id: 'i1',
-            title: '조건문 기본',
-            code: 'age = 18\nif age >= 18:\n    print("성인입니다")\nelse:\n    print("미성년자입니다")',
-            description: '나이에 따라 다른 메시지를 출력합니다.'
-        },
-        {
-            id: 'i2',
-            title: 'for 반복문',
-            code: 'for i in range(5):\n    print(f"숫자: {i}")',
-            description: '0부터 4까지 숫자를 순서대로 출력합니다.'
-        },
-        {
-            id: 'i3',
-            title: 'while 반복문',
-            code: 'count = 0\nwhile count < 3:\n    print(f"카운트: {count}")\n    count += 1',
-            description: '조건이 참인 동안 반복합니다.'
-        },
-        {
-            id: 'i4',
-            title: '함수 정의',
-            code: 'def greet(name):\n    return f"안녕하세요, {name}님!"\n\nmessage = greet("파이썬")\nprint(message)',
-            description: '함수를 정의하고 호출하는 방법입니다.'
-        },
-        {
-            id: 'i5',
-            title: '리스트 반복',
-            code: 'colors = ["빨강", "파랑", "노랑"]\nfor color in colors:\n    print(f"색깔: {color}")',
-            description: '리스트의 각 요소를 순회합니다.'
-        },
-        {
-            id: 'i6',
-            title: '딕셔너리 사용',
-            code: 'student = {"이름": "김철수", "나이": 20, "전공": "컴퓨터공학"}\nprint("학생 정보:")\nfor key, value in student.items():\n    print(f"  {key}: {value}")\nprint(f"\\n{student[\"이름\"]}님은 {student[\"나이\"]}세입니다.")',
-            description: '딕셔너리를 생성하고 모든 정보를 출력합니다.'
-        },
-        {
-            id: 'i7',
-            title: '리스트 컴프리헨션',
-            code: 'numbers = [1, 2, 3, 4, 5]\nsquares = [x**2 for x in numbers]\nprint(squares)',
-            description: '리스트 컴프리헨션으로 제곱수 리스트를 생성합니다.'
-        },
-        {
-            id: 'i8',
-            title: '예외 처리',
-            code: 'def safe_divide(a, b):\n    try:\n        result = a / b\n        return f"{a} ÷ {b} = {result}"\n    except ZeroDivisionError:\n        return "0으로 나눌 수 없습니다"\n\nprint(safe_divide(10, 2))\nprint(safe_divide(10, 0))',
-            description: '안전한 나눗셈을 위한 예외 처리입니다.'
-        },
-        {
-            id: 'i9',
-            title: '다중 조건문',
-            code: 'score = 85\nif score >= 90:\n    grade = "A"\nelif score >= 80:\n    grade = "B"\nelse:\n    grade = "C"\nprint(f"성적: {grade}")',
-            description: '여러 조건을 확인하여 등급을 결정합니다.'
-        },
-        {
-            id: 'i10',
-            title: '문자열 메서드',
-            code: 'text = "  Python Programming  "\nprint(text.strip())\nprint(text.upper())\nprint(text.replace("Python", "자바"))',
-            description: '문자열의 다양한 메서드를 사용합니다.'
-        }
-    ],
-    advanced: [
-        {
-            id: 'a1',
-            title: '클래스 정의',
-            code: 'class Calculator:\n    def __init__(self):\n        self.result = 0\n    \n    def add(self, num):\n        self.result += num\n        return self.result\n\ncalc = Calculator()\nprint(calc.add(10))\nprint(calc.add(5))',
-            description: '계산기 클래스를 정의하고 사용합니다.'
-        },
-        {
-            id: 'a2',
-            title: '상속',
-            code: 'class Animal:\n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return "멍멍!"\n\nclass Cat(Animal):\n    def speak(self):\n        return "야옹!"\n\ndog = Dog()\nprint(dog.speak())',
-            description: '상속을 사용하여 동물 클래스를 확장합니다.'
-        },
-        {
-            id: 'a3',
-            title: '데코레이터',
-            code: 'def timer(func):\n    def wrapper(*args, **kwargs):\n        print("시작")\n        result = func(*args, **kwargs)\n        print("끝")\n        return result\n    return wrapper\n\n@timer\ndef greet(name):\n    print(f"안녕, {name}!")\n\ngreet("파이썬")',
-            description: '데코레이터를 사용하여 함수를 장식합니다.'
-        },
-        {
-            id: 'a4',
-            title: '제너레이터',
-            code: 'def countdown(n):\n    print(f"카운트다운 시작: {n}")\n    while n > 0:\n        yield n\n        n -= 1\n    print("카운트다운 완료!")\n\nprint("제너레이터 실행:")\nfor num in countdown(5):\n    print(f"현재 숫자: {num}")',
-            description: '제너레이터를 사용하여 카운트다운을 구현합니다.'
-        },
-        {
-            id: 'a5',
-            title: '람다 함수',
-            code: 'numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))\nprint(squared)\nprint(even_numbers)',
-            description: '람다 함수와 map, filter를 함께 사용합니다.'
-        },
-        {
-            id: 'a6',
-            title: '컨텍스트 매니저',
-            code: 'class FileManager:\n    def __enter__(self):\n        print("파일 열기")\n        return self\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print("파일 닫기")\n\nwith FileManager() as fm:\n    print("파일 작업 중...")',
-            description: 'with문을 위한 컨텍스트 매니저를 구현합니다.'
-        },
-        {
-            id: 'a7',
-            title: '다중 상속',
-            code: 'class Flyable:\n    def fly(self):\n        return "날고 있습니다"\n\nclass Swimmable:\n    def swim(self):\n        return "수영하고 있습니다"\n\nclass Duck(Flyable, Swimmable):\n    def quack(self):\n        return "꽥꽥!"\n\nduck = Duck()\nprint(duck.fly())\nprint(duck.swim())',
-            description: '다중 상속을 사용하여 여러 능력을 가진 클래스를 만듭니다.'
-        },
-        {
-            id: 'a8',
-            title: '정적 메서드와 클래스 메서드',
-            code: 'class Calculator:\n    count = 0  # 클래스 변수\n    \n    def __init__(self, name):\n        self.name = name\n        Calculator.count += 1\n    \n    @staticmethod\n    def add(a, b):\n        return a + b\n    \n    @classmethod\n    def get_count(cls):\n        return cls.count\n\ncalc1 = Calculator("계산기1")\ncalc2 = Calculator("계산기2")\nprint(Calculator.add(5, 3))\nprint(Calculator.get_count())',
-            description: '정적 메서드와 클래스 메서드를 활용합니다.'
-        },
-        {
-            id: 'a9',
-            title: '모듈과 패키지',
-            code: 'import math\nimport random\nfrom datetime import datetime\n\n# 수학 함수 사용\nprint(f"원주율: {math.pi:.2f}")\nprint(f"제곱근: {math.sqrt(16)}")\n\n# 랜덤 함수 사용\nprint(f"랜덤 숫자: {random.randint(1, 10)}")\n\n# 날짜와 시간\nnow = datetime.now()\nprint(f"현재 시간: {now.strftime(\'%Y-%m-%d %H:%M:%S\')}")',
-            description: '다양한 모듈을 import하여 사용합니다.'
-        },
-        {
-            id: 'a10',
-            title: '프로퍼티 활용',
-            code: 'class Circle:\n    def __init__(self, radius):\n        self._radius = radius\n    \n    @property\n    def radius(self):\n        return self._radius\n    \n    @radius.setter\n    def radius(self, value):\n        if value > 0:\n            self._radius = value\n        else:\n            print("반지름은 양수여야 합니다")\n    \n    @property\n    def area(self):\n        return 3.14159 * self._radius ** 2\n\ncircle = Circle(5)\nprint(f"반지름: {circle.radius}")\nprint(f"넓이: {circle.area:.2f}")\ncircle.radius = 10\nprint(f"새 넓이: {circle.area:.2f}")',
-            description: '프로퍼티를 사용하여 원의 넓이를 계산합니다.'
-        }
-    ]
-};
+// ===== 파이썬 코드 데이터 가져오기 =====
+// python-codes.js에서 PythonCodes 데이터 사용
 
 // ===== 유틸리티 함수 =====
 function showScreen(screenId) {
-    // 모든 화면 숨기기
-    document.querySelectorAll('.screen').forEach(screen => {
-        screen.classList.remove('active');
-    });
+    console.log(`🔄 화면 전환 시도: ${AppState.currentScreen} → ${screenId}`);
     
-    // 요청된 화면 표시
-    const targetScreen = document.getElementById(screenId);
-    if (targetScreen) {
-        targetScreen.classList.add('active');
-        AppState.currentScreen = screenId;
-        console.log(`화면 전환: ${screenId}`);
-    } else {
-        console.error(`화면을 찾을 수 없습니다: ${screenId}`);
+    try {
+        // 모든 화면 숨기기
+        const allScreens = document.querySelectorAll('.screen');
+        console.log(`📱 총 ${allScreens.length}개의 화면 발견`);
+        
+        allScreens.forEach(screen => {
+            screen.classList.remove('active');
+        });
+        
+        // 요청된 화면 표시
+        const targetScreen = document.getElementById(screenId);
+        if (targetScreen) {
+            targetScreen.classList.add('active');
+            AppState.currentScreen = screenId;
+            console.log(`✅ 화면 전환 완료: ${screenId}`);
+        } else {
+            console.error(`❌ 화면을 찾을 수 없습니다: ${screenId}`);
+            console.log('📋 사용 가능한 화면들:');
+            allScreens.forEach(screen => {
+                console.log(`  - ${screen.id}`);
+            });
+        }
+    } catch (error) {
+        console.error(`❌ showScreen(${screenId}) 실행 중 오류:`, error);
     }
 }
 
@@ -405,19 +232,14 @@ class StorageManager {
     }
     
     static checkUnlockLevels() {
-        const progress = JSON.parse(localStorage.getItem('gameProgress') || '{}');
-        
-        // 초급 완료 체크
-        const beginnerCodes = PythonCodes.beginner;
-        const beginnerCompleted = beginnerCodes.filter(code => 
-            progress.beginner && progress.beginner[code.id] && progress.beginner[code.id].completed
-        ).length;
+        // 초급 완료 체크 (새로운 구조)
+        const beginnerProgress = getTotalProgress('beginner');
         
         // 중급 해금 체크 (초급 70% 이상 완료)
         const intermediateCard = document.querySelector('.difficulty-card.intermediate');
-        const wasIntermediateLocked = intermediateCard.classList.contains('locked');
+        const wasIntermediateLocked = intermediateCard && intermediateCard.classList.contains('locked');
         
-        if (beginnerCompleted >= Math.ceil(beginnerCodes.length * 0.7)) {
+        if (intermediateCard && beginnerProgress.percentage >= 70) {
             intermediateCard.classList.remove('locked');
             const intermediateLock = intermediateCard.querySelector('.lock-overlay');
             if (intermediateLock) {
@@ -434,17 +256,14 @@ class StorageManager {
             }
         }
         
-        // 중급 완료 체크  
-        const intermediateCodes = PythonCodes.intermediate;
-        const intermediateCompleted = intermediateCodes.filter(code => 
-            progress.intermediate && progress.intermediate[code.id] && progress.intermediate[code.id].completed
-        ).length;
+        // 중급 완료 체크 (새로운 구조)
+        const intermediateProgress = getTotalProgress('intermediate');
         
         // 고급 해금 체크 (중급 70% 이상 완료)
         const advancedCard = document.querySelector('.difficulty-card.advanced');
-        const wasAdvancedLocked = advancedCard.classList.contains('locked');
+        const wasAdvancedLocked = advancedCard && advancedCard.classList.contains('locked');
         
-        if (intermediateCompleted >= Math.ceil(intermediateCodes.length * 0.7)) {
+        if (advancedCard && intermediateProgress.percentage >= 70) {
             advancedCard.classList.remove('locked');
             const advancedLock = advancedCard.querySelector('.lock-overlay');
             if (advancedLock) {
@@ -494,18 +313,8 @@ class StorageManager {
     }
     
     static getProgress(difficulty) {
-        const progress = JSON.parse(localStorage.getItem('gameProgress') || '{}');
-        const codes = PythonCodes[difficulty];
-        
-        const completed = codes.filter(code => 
-            progress[difficulty] && progress[difficulty][code.id] && progress[difficulty][code.id].completed
-        ).length;
-        
-        return {
-            completed: completed,
-            total: codes.length,
-            percentage: Math.round((completed / codes.length) * 100)
-        };
+        // 새로운 구조에서는 getTotalProgress 사용
+        return getTotalProgress(difficulty);
     }
     
     static getAllStats() {
@@ -1215,6 +1024,9 @@ class TypingGame {
             codePreview.style.height = 'auto';
         }
         
+        // 결과 화면의 동일한 레벨 버튼 추가/업데이트
+        this.updateResultButtons();
+        
         showScreen('result-screen');
         
         // 코드 실행
@@ -1578,6 +1390,91 @@ class TypingGame {
             }
         }
     }
+    
+    // 결과 화면 버튼 업데이트
+    updateResultButtons() {
+        // 기존 결과 화면 버튼 컨테이너 찾기
+        const resultActions = document.querySelector('.result-actions');
+        if (!resultActions) return;
+        
+        // 기본 버튼들
+        let buttonsHTML = `
+            <button class="btn btn-primary" onclick="retryGame()">
+                <i class="fas fa-redo"></i> 다시 도전
+            </button>
+        `;
+        
+        // 동일한 레벨 버튼 (다른 예제가 있을 때만)
+        if (this.hasOtherExamples()) {
+            buttonsHTML += `
+                <button class="btn btn-secondary" onclick="sameLevelChallenge()">
+                    <i class="fas fa-random"></i> 동일한 레벨 도전
+                </button>
+            `;
+        }
+        
+        // 다음 단계 버튼
+        if (this.hasNextLevel()) {
+            buttonsHTML += `
+                <button class="btn btn-success" onclick="nextLevel()">
+                    <i class="fas fa-arrow-right"></i> 다음 단계
+                </button>
+            `;
+        }
+        
+        // 목록으로 돌아가기 버튼
+        buttonsHTML += `
+            <button class="btn btn-outline" onclick="exitGame()">
+                <i class="fas fa-list"></i> 목록으로 돌아가기
+            </button>
+        `;
+        
+        resultActions.innerHTML = buttonsHTML;
+    }
+    
+    // 같은 레벨의 다른 예제가 있는지 확인
+    hasOtherExamples() {
+        if (!AppState.currentDifficulty || !AppState.currentLength || !AppState.currentCode) {
+            return false;
+        }
+        
+        const allCodes = PythonCodes[AppState.currentDifficulty][AppState.currentLength];
+        return allCodes.length > 1; // 현재 코드 외에 다른 코드가 있는지
+    }
+    
+    // 다음 레벨이 있는지 확인
+    hasNextLevel() {
+        if (!AppState.currentDifficulty || !AppState.currentLength || !AppState.currentCode) {
+            return false;
+        }
+        
+        const codes = PythonCodes[AppState.currentDifficulty][AppState.currentLength];
+        const currentIndex = codes.findIndex(c => c.id === AppState.currentCode.id);
+        
+        // 같은 길이의 다음 코드가 있는지
+        if (currentIndex < codes.length - 1) {
+            return true;
+        }
+        
+        // 다음 길이가 있는지
+        const lengthOrder = ['short', 'medium', 'long'];
+        const currentLengthIndex = lengthOrder.indexOf(AppState.currentLength);
+        
+        if (currentLengthIndex < lengthOrder.length - 1) {
+            const nextLength = lengthOrder[currentLengthIndex + 1];
+            const nextLengthCodes = PythonCodes[AppState.currentDifficulty][nextLength];
+            if (nextLengthCodes && nextLengthCodes.length > 0) {
+                return true;
+            }
+        }
+        
+        // 다음 난이도가 있는지
+        if (AppState.currentDifficulty === 'beginner' || AppState.currentDifficulty === 'intermediate') {
+            return true;
+        }
+        
+        return false;
+    }
 }
 
 // ===== 화면 전환 함수들 =====
@@ -1588,22 +1485,22 @@ function showDifficulty(difficulty) {
     
     AppState.currentDifficulty = difficulty;
     
-    // 제목 업데이트
+    // 제목 업데이트 - 코드 길이 선택 화면으로
     const titles = {
-        beginner: '초급 레벨',
-        intermediate: '중급 레벨',  
-        advanced: '고급 레벨'
+        beginner: '초급 레벨 - 코드 길이 선택',
+        intermediate: '중급 레벨 - 코드 길이 선택',  
+        advanced: '고급 레벨 - 코드 길이 선택'
     };
     updateProgressElement('difficulty-title', titles[difficulty]);
     
-    // 코드 목록 로드 (진도 업데이트도 함께 처리됨)
-    loadCodeList(difficulty);
+    // 코드 길이 선택 화면 로드
+    loadLengthSelection(difficulty);
     showScreen('difficulty-screen');
 }
 
-function loadCodeList(difficulty) {
+// 코드 길이 선택 화면 로드
+function loadLengthSelection(difficulty) {
     const codeList = document.getElementById('code-list');
-    const codes = PythonCodes[difficulty];
     const progress = JSON.parse(localStorage.getItem('gameProgress') || '{}');
     
     // 난이도별 설명 업데이트
@@ -1615,8 +1512,131 @@ function loadCodeList(difficulty) {
     
     updateProgressElement('difficulty-description', descriptions[difficulty]);
     
-    // 진행률 업데이트 - 안전하게
-    const progressData = StorageManager.getProgress(difficulty);
+    // 전체 진행률 계산 (모든 길이 포함)
+    const totalProgress = getTotalProgress(difficulty);
+    updateProgressElement('progress-text', `${totalProgress.completed}/${totalProgress.total} 완료`);
+    updateProgressElement('progress-percentage', `${totalProgress.percentage}%`);
+    
+    const progressFill = document.getElementById('progress-fill');
+    if (progressFill) {
+        progressFill.style.width = `${totalProgress.percentage}%`;
+    }
+    
+    // 코드 길이별 카드 생성
+    const lengthCards = ['short', 'medium', 'long'].map(length => {
+        const lengthProgress = getProgressByLength(difficulty, length);
+        const lengthInfo = {
+            short: { 
+                title: '짧은 코드 연습', 
+                subtitle: '기본 문법 (1-3줄)',
+                icon: 'fas fa-bolt',
+                description: DifficultyDescriptions[difficulty].short
+            },
+            medium: { 
+                title: '중간 코드 연습', 
+                subtitle: '조합 문법 (4-8줄)',
+                icon: 'fas fa-code',
+                description: DifficultyDescriptions[difficulty].medium
+            },
+            long: { 
+                title: '긴 코드 연습', 
+                subtitle: '실전 프로젝트 (9줄 이상)',
+                icon: 'fas fa-project-diagram',
+                description: DifficultyDescriptions[difficulty].long
+            }
+        };
+        
+        return `
+            <div class="code-length-card" onclick="showCodeLength('${difficulty}', '${length}')">
+                <div class="length-card-header">
+                    <div class="length-icon">
+                        <i class="${lengthInfo[length].icon}"></i>
+                    </div>
+                    <div class="length-info">
+                        <h3>${lengthInfo[length].title}</h3>
+                        <p class="length-subtitle">${lengthInfo[length].subtitle}</p>
+                    </div>
+                </div>
+                <div class="length-card-body">
+                    <p class="length-description">${lengthInfo[length].description}</p>
+                    <div class="length-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${lengthProgress.percentage}%"></div>
+                        </div>
+                        <span class="progress-text">${lengthProgress.completed}/${lengthProgress.total} 완료</span>
+                    </div>
+                </div>
+                <div class="length-card-footer">
+                    <span class="difficulty-badge ${difficulty}">${getDifficultyKorean(difficulty)}</span>
+                    <span class="completion-badge ${lengthProgress.percentage === 100 ? 'complete' : ''}">
+                        ${lengthProgress.percentage === 100 ? '완료!' : '진행중'}
+                    </span>
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    // 길이 선택 화면에서는 length-selection-container 클래스 사용 (가운데 정렬을 위해)
+    codeList.className = 'length-selection-container';
+    codeList.innerHTML = `
+        <div class="length-selection-header">
+            <h2>원하는 코드 길이를 선택하세요</h2>
+            <p>각 카테고리마다 다양한 예제가 준비되어 있습니다</p>
+        </div>
+        <div class="length-cards-grid">
+            ${lengthCards}
+        </div>
+    `;
+}
+
+// 특정 길이의 코드 목록 표시
+function showCodeLength(difficulty, length) {
+    console.log(`📋 showCodeLength() 호출됨: ${difficulty} - ${length}`);
+    
+    AppState.currentDifficulty = difficulty;
+    AppState.currentLength = length;
+    
+    // 제목 업데이트
+    const lengthTitles = {
+        short: '짧은 코드',
+        medium: '중간 코드', 
+        long: '긴 코드'
+    };
+    const difficultyTitles = {
+        beginner: '초급',
+        intermediate: '중급',
+        advanced: '고급'
+    };
+    
+    updateProgressElement('difficulty-title', `${difficultyTitles[difficulty]} - ${lengthTitles[length]} 연습`);
+    
+    // 해당 길이의 코드 목록 로드
+    loadCodeList(difficulty, length);
+    
+    // 화면 전환 (이 부분이 빠져있었음!)
+    console.log(`📱 difficulty-screen으로 화면 전환 중...`);
+    showScreen('difficulty-screen');
+}
+
+function loadCodeList(difficulty, length) {
+    const codeList = document.getElementById('code-list');
+    const codes = PythonCodes[difficulty][length];
+    const progress = JSON.parse(localStorage.getItem('gameProgress') || '{}');
+    
+    // 일반 코드 목록에서는 code-grid 클래스 사용 (그리드 레이아웃을 위해)
+    codeList.className = 'code-grid';
+    
+    // 난이도별 설명 업데이트
+    const lengthDescriptions = {
+        short: DifficultyDescriptions[difficulty].short,
+        medium: DifficultyDescriptions[difficulty].medium,
+        long: DifficultyDescriptions[difficulty].long
+    };
+    
+    updateProgressElement('difficulty-description', lengthDescriptions[length]);
+    
+    // 해당 길이의 진행률 업데이트
+    const progressData = getProgressByLength(difficulty, length);
     updateProgressElement('progress-text', `${progressData.completed}/${progressData.total} 완료`);
     updateProgressElement('progress-percentage', `${progressData.percentage}%`);
     
@@ -1627,10 +1647,19 @@ function loadCodeList(difficulty) {
         console.warn('⚠️ progress-fill 요소를 찾을 수 없습니다.');
     }
     
-    codeList.innerHTML = codes.map((code, index) => {
+    // 뒤로가기 버튼 추가
+    const backButton = `
+        <div class="back-navigation">
+            <button class="btn btn-secondary" onclick="showDifficulty('${difficulty}')">
+                <i class="fas fa-arrow-left"></i> 코드 길이 선택으로 돌아가기
+            </button>
+        </div>
+    `;
+    
+    codeList.innerHTML = backButton + codes.map((code, index) => {
         const isCompleted = progress[difficulty] && progress[difficulty][code.id] && progress[difficulty][code.id].completed;
-        const isLocked = false; // 초급은 모두 해금, 다른 레벨은 순차 해금 로직 필요
-        const levelNumber = index + 1;
+        const isLocked = false; // 모든 코드 해금
+        const levelNumber = code.levelGroup || (index + 1);
         
         // 상태 결정
         let statusClass, statusIcon;
@@ -1645,15 +1674,18 @@ function loadCodeList(difficulty) {
             statusIcon = '<i class="fas fa-play"></i>';
         }
         
-        // 난이도 별표 생성
-        const difficultyLevel = getDifficultyLevel(difficulty, index);
+        // 카테고리 한글명
+        const categoryName = CategoryDescriptions[code.category] || code.category;
+        
+        // 난이도 별표 생성 (레벨 그룹에 따라)
+        const difficultyLevel = getDifficultyLevelByLevelGroup(difficulty, length, code.levelGroup || (index + 1));
         const difficultyStars = Array.from({length: 5}, (_, i) => {
             const starClass = i < difficultyLevel ? 'filled' : 'empty';
             return `<div class="difficulty-star ${starClass}"></div>`;
         }).join('');
         
         const completedClass = isCompleted ? 'completed' : '';
-        const clickHandler = isLocked ? '' : `onclick="startGame('${difficulty}', '${code.id}')"`;
+        const clickHandler = isLocked ? '' : `onclick="startGame('${difficulty}', '${length}', '${code.id}')"`;
         
         return `
             <div class="code-item ${completedClass}" ${clickHandler}>
@@ -1666,6 +1698,9 @@ function loadCodeList(difficulty) {
                 <div class="code-item-content">
                     <h4>${code.title}</h4>
                     <p>${code.description}</p>
+                    <div class="code-category">
+                        <span class="category-badge">${categoryName}</span>
+                    </div>
                     <pre class="code-preview">${code.code.length > 100 ? code.code.substring(0, 100) + '...' : code.code}</pre>
                 </div>
                 <div class="code-item-footer">
@@ -1679,7 +1714,7 @@ function loadCodeList(difficulty) {
     }).join('');
 }
 
-// 난이도 레벨 계산 함수
+// 난이도 레벨 계산 함수 (기존 호환성용)
 function getDifficultyLevel(difficulty, index) {
     const baseLevels = {
         beginner: 1,
@@ -1693,19 +1728,112 @@ function getDifficultyLevel(difficulty, index) {
     return Math.min(5, baseLevel + variation);
 }
 
-function startGame(difficulty, codeId) {
-    const code = PythonCodes[difficulty].find(c => c.id === codeId);
+// 길이별 난이도 레벨 계산 함수
+function getDifficultyLevelByLength(difficulty, length, index) {
+    const baseLevels = {
+        beginner: { short: 1, medium: 2, long: 3 },
+        intermediate: { short: 2, medium: 3, long: 4 },
+        advanced: { short: 3, medium: 4, long: 5 }
+    };
+    
+    const baseLevel = baseLevels[difficulty][length];
+    const variation = Math.floor(index / 4); // 4개마다 난이도 증가
+    
+    return Math.min(5, baseLevel + variation);
+}
+
+// 레벨 그룹별 난이도 레벨 계산 함수
+function getDifficultyLevelByLevelGroup(difficulty, length, levelGroup) {
+    const baseLevels = {
+        beginner: { short: 1, medium: 2, long: 3 },
+        intermediate: { short: 2, medium: 3, long: 4 },
+        advanced: { short: 3, medium: 4, long: 5 }
+    };
+    
+    const baseLevel = baseLevels[difficulty][length];
+    
+    // 레벨 그룹에 따른 난이도 증가 (각 레벨 그룹은 동일한 난이도)
+    return Math.min(5, baseLevel + Math.floor((levelGroup - 1) / 3));
+}
+
+// 특정 길이의 진행률 계산
+function getProgressByLength(difficulty, length) {
+    const progress = JSON.parse(localStorage.getItem('gameProgress') || '{}');
+    const codes = PythonCodes[difficulty][length];
+    
+    const completed = codes.filter(code => 
+        progress[difficulty] && progress[difficulty][code.id] && progress[difficulty][code.id].completed
+    ).length;
+    
+    return {
+        completed: completed,
+        total: codes.length,
+        percentage: Math.round((completed / codes.length) * 100)
+    };
+}
+
+// 전체 진행률 계산 (모든 길이 포함)
+function getTotalProgress(difficulty) {
+    let totalCompleted = 0;
+    let totalCodes = 0;
+    
+    ['short', 'medium', 'long'].forEach(length => {
+        const lengthProgress = getProgressByLength(difficulty, length);
+        totalCompleted += lengthProgress.completed;
+        totalCodes += lengthProgress.total;
+    });
+    
+    return {
+        completed: totalCompleted,
+        total: totalCodes,
+        percentage: totalCodes > 0 ? Math.round((totalCompleted / totalCodes) * 100) : 0
+    };
+}
+
+// 한국어 난이도명
+function getDifficultyKorean(difficulty) {
+    const korean = {
+        beginner: '초급',
+        intermediate: '중급',
+        advanced: '고급'
+    };
+    return korean[difficulty] || difficulty;
+}
+
+function startGame(difficulty, length, codeId) {
+    console.log('🎮 startGame 호출됨:', { difficulty, length, codeId });
+    
+    const code = findCodeById(codeId);
     if (!code) {
-        console.error('❌ 코드를 찾을 수 없습니다:', difficulty, codeId);
+        console.error('❌ 코드를 찾을 수 없습니다:', difficulty, length, codeId);
         return;
     }
     
-    // 현재 난이도와 코드 설정
+    console.log('📋 선택된 코드 정보:', {
+        id: code.id,
+        title: code.title,
+        category: code.category,
+        actualDifficulty: code.difficulty,
+        actualLength: code.length
+    });
+    
+    // 현재 난이도, 길이, 코드 설정
     AppState.currentDifficulty = difficulty;
+    AppState.currentLength = length;
     AppState.currentCode = code;
     
     // 게임 화면 설정 - 안전하게
-    const levelNumber = PythonCodes[difficulty].findIndex(c => c.id === codeId) + 1;
+    const codes = PythonCodes[difficulty][length];
+    const levelNumber = code.levelGroup || (codes.findIndex(c => c.id === codeId) + 1);
+    
+    console.log('🎯 레벨 정보:', {
+        levelNumber: levelNumber,
+        levelGroup: code.levelGroup,
+        totalCodes: codes.length,
+        difficulty: difficulty,
+        length: length
+    });
+    
     updateGameHeader('current-level', `Level ${levelNumber}`);
     updateGameHeader('current-title', code.title);
     
@@ -1716,7 +1844,12 @@ function startGame(difficulty, codeId) {
         game.start(code.code);
         
         showScreen('game-screen');
-        console.log('✅ 게임 시작:', difficulty, code.title);
+        console.log('✅ 게임 시작 완료:', {
+            difficulty,
+            length,
+            title: code.title,
+            level: levelNumber
+        });
     } catch (error) {
         console.error('❌ 게임 시작 실패:', error);
         alert('게임을 시작할 수 없습니다. 페이지를 새로고침 해주세요.');
@@ -1737,41 +1870,163 @@ function updateGameHeader(elementId, value) {
 }
 
 function exitGame() {
-    if (AppState.gameTimer) {
-        clearInterval(AppState.gameTimer);
-        AppState.gameTimer = null;
-    }
+    console.log('🚪 exitGame() 함수 호출됨');
+    console.log('현재 상태:', {
+        difficulty: AppState.currentDifficulty,
+        length: AppState.currentLength,
+        timer: AppState.gameTimer
+    });
     
-    // 현재 난이도가 설정되어 있으면 해당 난이도 화면으로, 없으면 메인 메뉴로
-    if (AppState.currentDifficulty) {
-        showDifficulty(AppState.currentDifficulty);
-    } else {
+    try {
+        if (AppState.gameTimer) {
+            clearInterval(AppState.gameTimer);
+            AppState.gameTimer = null;
+            console.log('⏰ 게임 타이머 정리 완료');
+        }
+        
+        // 현재 난이도와 길이가 설정되어 있으면 해당 화면으로, 없으면 메인 메뉴로
+        if (AppState.currentDifficulty && AppState.currentLength) {
+            console.log('📂 코드 길이 선택 화면으로 이동');
+            showCodeLength(AppState.currentDifficulty, AppState.currentLength);
+        } else if (AppState.currentDifficulty) {
+            console.log('📚 난이도 선택 화면으로 이동');
+            showDifficulty(AppState.currentDifficulty);
+        } else {
+            console.log('🏠 메인 메뉴로 이동');
+            showScreen('main-menu');
+        }
+        
+        console.log('✅ exitGame() 함수 실행 완료');
+    } catch (error) {
+        console.error('❌ exitGame() 실행 중 오류:', error);
+        // 오류 발생 시 강제로 메인 메뉴로 이동
         showScreen('main-menu');
     }
 }
 
 function retryGame() {
-    if (AppState.currentCode) {
-        startGame(AppState.currentDifficulty, AppState.currentCode.id);
+    if (AppState.currentCode && AppState.currentDifficulty && AppState.currentLength) {
+        startGame(AppState.currentDifficulty, AppState.currentLength, AppState.currentCode.id);
+    }
+}
+
+function sameLevelChallenge() {
+    console.log('🎲 동일한 레벨 도전 시작!');
+    console.log('현재 상태:', {
+        difficulty: AppState.currentDifficulty,
+        length: AppState.currentLength,
+        currentCode: AppState.currentCode?.id,
+        levelGroup: AppState.currentCode?.levelGroup
+    });
+    
+    if (AppState.currentDifficulty && AppState.currentLength && AppState.currentCode) {
+        const allCodes = PythonCodes[AppState.currentDifficulty][AppState.currentLength];
+        const currentLevelGroup = AppState.currentCode.levelGroup;
+        
+        console.log(`📚 ${AppState.currentDifficulty}-${AppState.currentLength}에서 총 ${allCodes.length}개 코드 발견`);
+        console.log(`🎯 현재 레벨 그룹: ${currentLevelGroup}`);
+        
+        // 1차: 같은 레벨 그룹에서 다른 예제 선택
+        const sameLevelCode = getRandomCodeBySameLevel(
+            AppState.currentDifficulty, 
+            AppState.currentLength, 
+            currentLevelGroup,
+            AppState.currentCode.id
+        );
+        
+        if (sameLevelCode) {
+            console.log('✨ 같은 레벨에서 선택됨:', {
+                id: sameLevelCode.id,
+                title: sameLevelCode.title,
+                levelGroup: sameLevelCode.levelGroup
+            });
+            startGame(AppState.currentDifficulty, AppState.currentLength, sameLevelCode.id);
+            return;
+        }
+        
+        // 2차: 같은 카테고리에서 선택 (같은 레벨이 없을 때)
+        console.log('⚠️ 같은 레벨 없음, 같은 카테고리에서 선택 중...');
+        const randomCode = getRandomCodeByCategory(
+            AppState.currentDifficulty, 
+            AppState.currentLength, 
+            AppState.currentCode.category,
+            AppState.currentCode.id
+        );
+        
+        if (randomCode) {
+            console.log('🔄 같은 카테고리에서 선택됨:', {
+                id: randomCode.id,
+                title: randomCode.title,
+                category: randomCode.category,
+                levelGroup: randomCode.levelGroup
+            });
+            startGame(AppState.currentDifficulty, AppState.currentLength, randomCode.id);
+            return;
+        }
+        
+        // 3차: 전체에서 랜덤 선택 (최후 수단)
+        console.log('⚠️ 같은 카테고리도 없음, 전체에서 선택 중...');
+        const randomCodeAny = getRandomCode(
+            AppState.currentDifficulty, 
+            AppState.currentLength, 
+            AppState.currentCode.id
+        );
+        
+        if (randomCodeAny) {
+            console.log('🔀 전체에서 선택됨:', {
+                id: randomCodeAny.id,
+                title: randomCodeAny.title,
+                category: randomCodeAny.category,
+                levelGroup: randomCodeAny.levelGroup
+            });
+            startGame(AppState.currentDifficulty, AppState.currentLength, randomCodeAny.id);
+        } else {
+            console.log('❌ 선택 가능한 다른 코드가 없음');
+            alert('다른 예제가 없습니다.');
+            exitGame();
+        }
+    } else {
+        console.error('❌ 현재 게임 상태가 유효하지 않음');
     }
 }
 
 function nextLevel() {
-    const codes = PythonCodes[AppState.currentDifficulty];
+    const codes = PythonCodes[AppState.currentDifficulty][AppState.currentLength];
     const currentIndex = codes.findIndex(c => c.id === AppState.currentCode.id);
     
     if (currentIndex < codes.length - 1) {
+        // 같은 길이의 다음 코드
         const nextCode = codes[currentIndex + 1];
-        startGame(AppState.currentDifficulty, nextCode.id);
+        startGame(AppState.currentDifficulty, AppState.currentLength, nextCode.id);
     } else {
-        // 다음 난이도로
-        if (AppState.currentDifficulty === 'beginner') {
-            showDifficulty('intermediate');
-        } else if (AppState.currentDifficulty === 'intermediate') {
-            showDifficulty('advanced');
+        // 현재 길이의 마지막 코드인 경우
+        const lengthOrder = ['short', 'medium', 'long'];
+        const currentLengthIndex = lengthOrder.indexOf(AppState.currentLength);
+        
+        if (currentLengthIndex < lengthOrder.length - 1) {
+            // 다음 길이로
+            const nextLength = lengthOrder[currentLengthIndex + 1];
+            const nextLengthCodes = PythonCodes[AppState.currentDifficulty][nextLength];
+            if (nextLengthCodes.length > 0) {
+                startGame(AppState.currentDifficulty, nextLength, nextLengthCodes[0].id);
+            } else {
+                // 다음 난이도로
+                moveToNextDifficulty();
+            }
         } else {
-            showScreen('main-menu');
+            // 다음 난이도로
+            moveToNextDifficulty();
         }
+    }
+}
+
+function moveToNextDifficulty() {
+    if (AppState.currentDifficulty === 'beginner') {
+        showDifficulty('intermediate');
+    } else if (AppState.currentDifficulty === 'intermediate') {
+        showDifficulty('advanced');
+    } else {
+        showScreen('main-menu');
     }
 }
 
@@ -1867,6 +2122,19 @@ function initializePythonTypeAcademy() {
             }
         });
         
+        // X 버튼 이벤트 리스너 추가 (추가 안전장치)
+        const gameBackBtn = document.querySelector('#game-screen .back-btn');
+        if (gameBackBtn) {
+            gameBackBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('🖱️ X 버튼 클릭됨 (이벤트 리스너)');
+                exitGame();
+            });
+            console.log('🔗 X 버튼 이벤트 리스너 등록 완료');
+        } else {
+            console.warn('⚠️ X 버튼을 찾을 수 없습니다');
+        }
+        
         // 앱 상태 초기화
         AppState.currentScreen = 'main-menu';
         
@@ -1912,9 +2180,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===== 전역 함수 (HTML에서 호출) =====
 window.showScreen = showScreen;
 window.showDifficulty = showDifficulty;
+window.showCodeLength = showCodeLength;
 window.startGame = startGame;
 window.exitGame = exitGame;
 window.retryGame = retryGame;
+window.sameLevelChallenge = sameLevelChallenge;
 window.nextLevel = nextLevel;
 window.showStats = showStats;
 window.showSettings = showSettings; 
