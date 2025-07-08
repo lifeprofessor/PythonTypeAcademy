@@ -3067,3 +3067,81 @@ body.dark-mode #installation-list li {
 body.dark-mode .install-status {
     color: var(--dark-text-secondary);
 } 
+
+/* ===== Footer 스타일 ===== */
+.app-footer {
+    width: 100%;
+    padding: 30px 20px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px; /* 60px에서 30px로 줄임 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content a {
+    display: inline-block;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.footer-logo {
+    max-width: 250px; /* 150px에서 200px로 증가 */
+    height: auto;
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+    filter: grayscale(20%);
+}
+
+.footer-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.footer-content a:hover {
+    transform: translateY(-2px);
+}
+
+/* 다크 모드 지원 */
+[data-theme="dark"] .app-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .footer-logo {
+    filter: grayscale(20%) brightness(0.9);
+}
+
+[data-theme="dark"] .footer-logo:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .app-footer {
+        padding: 25px 15px;
+        margin-top: 25px; /* 40px에서 25px로 줄임 */
+    }
+    
+    .footer-logo {
+        max-width: 160px; /* 120px에서 160px로 증가 */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-footer {
+        padding: 20px 10px;
+        margin-top: 20px; /* 30px에서 20px로 줄임 */
+    }
+    
+    .footer-logo {
+        max-width: 130px; /* 100px에서 130px로 증가 */
+    }
+} 
