@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- 간단한 초기화 스크립트 -->
+    <!-- 라이브러리 상태 관리 -->
     <script>
         window.libraryLoadStatus = {
             codeEditor: true,  // 기본 에디터는 항상 사용 가능
@@ -16,18 +16,12 @@
             allLoaded: true
         };
         
-        function initializeApp() {
-            console.log('🐍 Python Type Academy 초기화 시작...');
-            // DOM 준비 완료 후 초기화
-        }
-        
-        // DOM 로드 시 즉시 초기화
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeApp);
-        } else {
-            initializeApp();
-        }
+        console.log('📚 Python Type Academy HTML 로드됨');
     </script>
+    
+    <!-- 스크립트 로딩 순서 보장 -->
+    <script src="python-codes.js"></script>
+    <script src="script.js"></script>
     
     <!-- Pyodide는 선택사항으로 처리 -->
     <script>
@@ -79,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="difficulty-card intermediate locked" onclick="showDifficulty('intermediate')">
+                    <div class="difficulty-card intermediate" onclick="showDifficulty('intermediate')">
                         <div class="card-icon">
                             <i class="fas fa-fire"></i>
                         </div>
@@ -88,12 +82,9 @@
                         <div class="card-stats">
                             <span class="level-badge">Level 11-20</span>
                         </div>
-                        <div class="lock-overlay">
-                            <i class="fas fa-lock"></i>
-                        </div>
                     </div>
 
-                    <div class="difficulty-card advanced locked" onclick="showDifficulty('advanced')">
+                    <div class="difficulty-card advanced" onclick="showDifficulty('advanced')">
                         <div class="card-icon">
                             <i class="fas fa-crown"></i>
                         </div>
@@ -101,9 +92,6 @@
                         <p>클래스, 모듈, 복잡한 알고리즘</p>
                         <div class="card-stats">
                             <span class="level-badge">Level 21-30</span>
-                        </div>
-                        <div class="lock-overlay">
-                            <i class="fas fa-lock"></i>
                         </div>
                     </div>
                 </div>
@@ -363,8 +351,5 @@
             </div>
         </div>
     </div>
-
-    <script src="python-codes.js"></script>
-    <script src="script.js"></script>
 </body>
 </html> 

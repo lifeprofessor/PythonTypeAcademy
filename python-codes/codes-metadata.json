@@ -1,0 +1,1002 @@
+{
+  "beginner": {
+    "short": [
+      {
+        "id": "b_s1_1",
+        "title": "기본 출력문",
+        "description": "파이썬의 가장 기본적인 출력문입니다.",
+        "category": "basic",
+        "levelGroup": 1,
+        "file": "beginner/short/b_s1_1.py"
+      },
+      {
+        "id": "b_s1_2",
+        "title": "환영 메시지",
+        "description": "환영 메시지를 출력하는 기본 예제입니다.",
+        "category": "basic",
+        "levelGroup": 1,
+        "file": "beginner/short/b_s1_2.py"
+      },
+      {
+        "id": "b_s1_3",
+        "title": "간단한 인사",
+        "description": "한국어로 인사하는 기본 출력문입니다.",
+        "category": "basic",
+        "levelGroup": 1,
+        "file": "beginner/short/b_s1_3.py"
+      },
+      {
+        "id": "b_s2_1",
+        "title": "인사말 출력",
+        "description": "여러 줄의 인사말을 출력합니다.",
+        "category": "basic",
+        "levelGroup": 2,
+        "file": "beginner/short/b_s2_1.py"
+      },
+      {
+        "id": "b_s2_2",
+        "title": "프로그램 소개",
+        "description": "프로그램을 소개하는 메시지를 출력합니다.",
+        "category": "basic",
+        "levelGroup": 2,
+        "file": "beginner/short/b_s2_2.py"
+      },
+      {
+        "id": "b_s2_3",
+        "title": "일일 인사",
+        "description": "일일 인사와 격려 메시지를 출력합니다.",
+        "category": "basic",
+        "levelGroup": 2,
+        "file": "beginner/short/b_s2_3.py"
+      },
+      {
+        "id": "b_s3_1",
+        "title": "덧셈 계산",
+        "description": "간단한 덧셈을 계산하고 출력합니다.",
+        "category": "arithmetic",
+        "levelGroup": 3,
+        "file": "beginner/short/b_s3_1.py"
+      },
+      {
+        "id": "b_s3_2",
+        "title": "곱셈 계산",
+        "description": "간단한 곱셈을 계산하고 출력합니다.",
+        "category": "arithmetic",
+        "levelGroup": 3,
+        "file": "beginner/short/b_s3_2.py"
+      },
+      {
+        "id": "b_s3_3",
+        "title": "나눗셈 계산",
+        "description": "간단한 나눗셈을 계산하고 출력합니다.",
+        "category": "arithmetic",
+        "levelGroup": 3,
+        "file": "beginner/short/b_s3_3.py"
+      },
+      {
+        "id": "b_s4_1",
+        "title": "문자열 변수",
+        "description": "문자열 변수를 선언하고 출력합니다.",
+        "category": "variables",
+        "levelGroup": 4,
+        "file": "beginner/short/b_s4_1.py"
+      },
+      {
+        "id": "b_s4_2",
+        "title": "좋아하는 언어",
+        "description": "좋아하는 프로그래밍 언어를 변수로 저장합니다.",
+        "category": "variables",
+        "levelGroup": 4,
+        "file": "beginner/short/b_s4_2.py"
+      },
+      {
+        "id": "b_s4_3",
+        "title": "학교 이름",
+        "description": "학교 이름을 변수로 저장하고 출력합니다.",
+        "category": "variables",
+        "levelGroup": 4,
+        "file": "beginner/short/b_s4_3.py"
+      },
+      {
+        "id": "b_s5_1",
+        "title": "나이 변수",
+        "description": "숫자 변수를 사용하여 나이를 저장합니다.",
+        "category": "variables",
+        "levelGroup": 5,
+        "file": "beginner/short/b_s5_1.py"
+      },
+      {
+        "id": "b_s5_2",
+        "title": "점수 변수",
+        "description": "시험 점수를 변수로 저장하고 출력합니다.",
+        "category": "variables",
+        "levelGroup": 5,
+        "file": "beginner/short/b_s5_2.py"
+      },
+      {
+        "id": "b_s5_3",
+        "title": "온도 변수",
+        "description": "현재 온도를 변수로 저장하고 출력합니다.",
+        "category": "variables",
+        "levelGroup": 5,
+        "file": "beginner/short/b_s5_3.py"
+      }
+    ],
+    "medium": [
+      {
+        "id": "b_m1_1",
+        "title": "사용자 정보 출력",
+        "description": "변수를 활용하여 개인정보를 출력합니다.",
+        "category": "variables",
+        "levelGroup": 1,
+        "file": "beginner/medium/b_m1_1.py"
+      },
+      {
+        "id": "b_m1_2",
+        "title": "회사 소개",
+        "description": "회사 정보를 변수로 저장하고 출력합니다.",
+        "category": "variables",
+        "levelGroup": 1,
+        "file": "beginner/medium/b_m1_2.py"
+      },
+      {
+        "id": "b_m1_3",
+        "title": "제품 정보",
+        "description": "제품 정보를 정리하여 출력합니다.",
+        "category": "variables",
+        "levelGroup": 1,
+        "file": "beginner/medium/b_m1_3.py"
+      },
+      {
+        "id": "b_m2_1",
+        "title": "계산기 기초",
+        "description": "두 숫자의 합과 차이를 계산합니다.",
+        "category": "arithmetic",
+        "levelGroup": 2,
+        "file": "beginner/medium/b_m2_1.py"
+      },
+      {
+        "id": "b_m2_2",
+        "title": "문자열 정보",
+        "description": "문자열의 다양한 정보를 출력합니다.",
+        "category": "strings",
+        "levelGroup": 2,
+        "file": "beginner/medium/b_m2_2.py"
+      },
+      {
+        "id": "b_m2_3",
+        "title": "원의 넓이 계산",
+        "description": "원의 반지름으로 넓이와 둘레를 계산합니다.",
+        "category": "arithmetic",
+        "levelGroup": 2,
+        "file": "beginner/medium/b_m2_3.py"
+      },
+      {
+        "id": "b_m3_1",
+        "title": "리스트 다루기",
+        "description": "리스트의 요소에 접근하고 길이를 확인합니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "beginner/medium/b_m3_1.py"
+      },
+      {
+        "id": "b_m3_2",
+        "title": "성적 목록",
+        "description": "성적 리스트에서 최고, 최저, 평균을 구합니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "beginner/medium/b_m3_2.py"
+      },
+      {
+        "id": "b_m3_3",
+        "title": "과일 장바구니",
+        "description": "과일과 가격을 함께 출력합니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "beginner/medium/b_m3_3.py"
+      },
+      {
+        "id": "b_m4_1",
+        "title": "타입 확인",
+        "description": "다양한 변수의 데이터 타입을 확인합니다.",
+        "category": "basic",
+        "levelGroup": 4,
+        "file": "beginner/medium/b_m4_1.py"
+      },
+      {
+        "id": "b_m4_2",
+        "title": "타입 변환",
+        "description": "서로 다른 타입 간의 변환을 수행합니다.",
+        "category": "basic",
+        "levelGroup": 4,
+        "file": "beginner/medium/b_m4_2.py"
+      },
+      {
+        "id": "b_m4_3",
+        "title": "불린과 비교",
+        "description": "비교 연산의 결과로 불린 타입을 확인합니다.",
+        "category": "basic",
+        "levelGroup": 4,
+        "file": "beginner/medium/b_m4_3.py"
+      },
+      {
+        "id": "b_m5_1",
+        "title": "문자열 메서드",
+        "description": "문자열의 다양한 메서드를 사용합니다.",
+        "category": "strings",
+        "levelGroup": 5,
+        "file": "beginner/medium/b_m5_1.py"
+      },
+      {
+        "id": "b_m5_2",
+        "title": "문자열 분할과 결합",
+        "description": "문자열을 분할하고 다시 결합합니다.",
+        "category": "strings",
+        "levelGroup": 5,
+        "file": "beginner/medium/b_m5_2.py"
+      },
+      {
+        "id": "b_m5_3",
+        "title": "문자열 검색과 교체",
+        "description": "문자열에서 특정 단어를 찾고 교체합니다.",
+        "category": "strings",
+        "levelGroup": 5,
+        "file": "beginner/medium/b_m5_3.py"
+      }
+    ],
+    "long": [
+      {
+        "id": "b_l1_1",
+        "title": "학생 소개 프로그램",
+        "description": "변수와 출력문을 활용한 학생 소개 프로그램입니다.",
+        "category": "basic",
+        "levelGroup": 1,
+        "file": "beginner/long/b_l1_1.py"
+      },
+      {
+        "id": "b_l2_1",
+        "title": "학생 성적 관리",
+        "description": "학생의 성적을 계산하고 등급을 평가하는 프로그램입니다.",
+        "category": "arithmetic",
+        "levelGroup": 2,
+        "file": "beginner/long/b_l2_1.py"
+      }
+    ]
+  },
+  "intermediate": {
+    "short": [
+      {
+        "id": "i_s1_1",
+        "title": "짝수 홀수 판별",
+        "description": "삼항연산자를 사용하여 숫자가 짝수인지 홀수인지 판별합니다.",
+        "category": "conditionals",
+        "levelGroup": 1,
+        "file": "intermediate/short/i_s1_1.py"
+      },
+      {
+        "id": "i_s1_2",
+        "title": "양수 음수 판별",
+        "description": "if-elif-else 문을 사용하여 양수, 음수, 0을 판별합니다.",
+        "category": "conditionals",
+        "levelGroup": 1,
+        "file": "intermediate/short/i_s1_2.py"
+      },
+      {
+        "id": "i_s1_3",
+        "title": "두 수 중 큰 값",
+        "description": "삼항연산자로 두 수 중 더 큰 값을 선택합니다.",
+        "category": "conditionals",
+        "levelGroup": 1,
+        "file": "intermediate/short/i_s1_3.py"
+      },
+      {
+        "id": "i_s2_1",
+        "title": "점수 등급 분류",
+        "description": "점수에 따라 A, B, C, F 등급으로 분류합니다.",
+        "category": "conditionals",
+        "levelGroup": 2,
+        "file": "intermediate/short/i_s2_1.py"
+      },
+      {
+        "id": "i_s2_2",
+        "title": "나이별 요금 계산",
+        "description": "나이에 따라 어린이, 청소년, 성인 요금을 분류합니다.",
+        "category": "conditionals",
+        "levelGroup": 2,
+        "file": "intermediate/short/i_s2_2.py"
+      },
+      {
+        "id": "i_s2_3",
+        "title": "온도별 옷차림",
+        "description": "기온에 따라 반팔, 긴팔, 코트를 추천합니다.",
+        "category": "conditionals",
+        "levelGroup": 2,
+        "file": "intermediate/short/i_s2_3.py"
+      },
+      {
+        "id": "i_s3_1",
+        "title": "문자열 길이 측정",
+        "description": "len() 함수를 사용하여 문자열의 길이를 구합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/short/i_s3_1.py"
+      },
+      {
+        "id": "i_s3_2",
+        "title": "문자열 포함 확인",
+        "description": "in 연산자로 문자열에 특정 단어가 포함되어 있는지 확인합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/short/i_s3_2.py"
+      },
+      {
+        "id": "i_s3_3",
+        "title": "문자열 소문자 변환",
+        "description": "lower() 메서드를 사용하여 문자열을 소문자로 변환합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/short/i_s3_3.py"
+      },
+      {
+        "id": "i_s4_1",
+        "title": "리스트 최댓값",
+        "description": "max() 함수를 사용하여 리스트에서 가장 큰 값을 찾습니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/short/i_s4_1.py"
+      },
+      {
+        "id": "i_s4_2",
+        "title": "리스트 평균 계산",
+        "description": "sum()과 len()을 사용하여 리스트의 평균을 계산합니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/short/i_s4_2.py"
+      },
+      {
+        "id": "i_s4_3",
+        "title": "리스트 길이",
+        "description": "len() 함수를 사용하여 리스트의 요소 개수를 구합니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/short/i_s4_3.py"
+      },
+      {
+        "id": "i_s5_1",
+        "title": "기본 반복문",
+        "description": "for문과 range()를 사용하여 1부터 5까지 출력합니다.",
+        "category": "loops",
+        "levelGroup": 5,
+        "file": "intermediate/short/i_s5_1.py"
+      },
+      {
+        "id": "i_s5_2",
+        "title": "구구단 3단",
+        "description": "for문을 사용하여 구구단 3단을 출력합니다.",
+        "category": "loops",
+        "levelGroup": 5,
+        "file": "intermediate/short/i_s5_2.py"
+      },
+      {
+        "id": "i_s5_3",
+        "title": "리스트 순회",
+        "description": "for문을 사용하여 리스트의 모든 요소를 출력합니다.",
+        "category": "loops",
+        "levelGroup": 5,
+        "file": "intermediate/short/i_s5_3.py"
+      }
+    ],
+    "medium": [
+      {
+        "id": "i_m1_1",
+        "title": "짝수만 출력",
+        "description": "1부터 10까지 숫자 중 짝수만 출력하는 프로그램입니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/medium/i_m1_1.py"
+      },
+      {
+        "id": "i_m1_2",
+        "title": "FizzBuzz 게임",
+        "description": "1부터 100까지 FizzBuzz 게임을 구현합니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/medium/i_m1_2.py"
+      },
+      {
+        "id": "i_m1_3",
+        "title": "팩토리얼 계산",
+        "description": "반복문을 사용하여 주어진 수의 팩토리얼을 계산합니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/medium/i_m1_3.py"
+      },
+      {
+        "id": "i_m2_1",
+        "title": "제곱 함수",
+        "description": "숫자의 제곱을 계산하는 함수를 정의하고 사용합니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/medium/i_m2_1.py"
+      },
+      {
+        "id": "i_m2_2",
+        "title": "짝수 판별 함수",
+        "description": "숫자가 짝수인지 판별하는 함수를 작성합니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/medium/i_m2_2.py"
+      },
+      {
+        "id": "i_m2_3",
+        "title": "인사 함수",
+        "description": "이름을 받아 인사말을 반환하는 함수를 만듭니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/medium/i_m2_3.py"
+      },
+      {
+        "id": "i_m3_1",
+        "title": "문자열 분할",
+        "description": "split() 메서드를 사용하여 문자열을 단어별로 분할합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/medium/i_m3_1.py"
+      },
+      {
+        "id": "i_m3_2",
+        "title": "이메일 사용자명 추출",
+        "description": "이메일에서 @ 앞의 사용자명을 추출합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/medium/i_m3_2.py"
+      },
+      {
+        "id": "i_m3_3",
+        "title": "문자열 공백 제거",
+        "description": "strip() 메서드로 문자열 양쪽 끝의 공백을 제거합니다.",
+        "category": "strings",
+        "levelGroup": 3,
+        "file": "intermediate/medium/i_m3_3.py"
+      },
+      {
+        "id": "i_m4_1",
+        "title": "리스트 컴프리헨션",
+        "description": "리스트 컴프리헨션을 사용하여 제곱수 리스트를 만듭니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/medium/i_m4_1.py"
+      },
+      {
+        "id": "i_m4_2",
+        "title": "딕셔너리 접근",
+        "description": "딕셔너리에서 특정 키의 값에 접근합니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/medium/i_m4_2.py"
+      },
+      {
+        "id": "i_m4_3",
+        "title": "리스트 요소 제거",
+        "description": "조건문과 remove()를 사용하여 리스트에서 요소를 제거합니다.",
+        "category": "data_structures",
+        "levelGroup": 4,
+        "file": "intermediate/medium/i_m4_3.py"
+      },
+      {
+        "id": "i_m5_1",
+        "title": "파일 쓰기",
+        "description": "with문과 open()을 사용하여 파일에 텍스트를 씁니다.",
+        "category": "file_io",
+        "levelGroup": 5,
+        "file": "intermediate/medium/i_m5_1.py"
+      },
+      {
+        "id": "i_m5_2",
+        "title": "파일 읽기",
+        "description": "with문과 open()을 사용하여 파일의 내용을 읽습니다.",
+        "category": "file_io",
+        "levelGroup": 5,
+        "file": "intermediate/medium/i_m5_2.py"
+      },
+      {
+        "id": "i_m5_3",
+        "title": "파일 여러 줄 쓰기",
+        "description": "writelines()를 사용하여 파일에 여러 줄을 씁니다.",
+        "category": "file_io",
+        "levelGroup": 5,
+        "file": "intermediate/medium/i_m5_3.py"
+      }
+    ],
+    "long": [
+      {
+        "id": "i_l1_1",
+        "title": "FizzBuzzBang 게임",
+        "description": "3, 5, 7의 배수에 대한 확장된 FizzBuzz 게임을 구현합니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/long/i_l1_1.py"
+      },
+      {
+        "id": "i_l1_2",
+        "title": "수 통계 분석",
+        "description": "1부터 100까지 수의 짝수/홀수/배수 개수를 분석합니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/long/i_l1_2.py"
+      },
+      {
+        "id": "i_l1_3",
+        "title": "짝수단 구구단",
+        "description": "짝수단 구구단을 출력하고 완전제곱수를 판별합니다.",
+        "category": "loops",
+        "levelGroup": 1,
+        "file": "intermediate/long/i_l1_3.py"
+      },
+      {
+        "id": "i_l2_1",
+        "title": "팩토리얼 계산기",
+        "description": "팩토리얼을 계산하는 함수를 만들고 계산 과정을 출력합니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/long/i_l2_1.py"
+      },
+      {
+        "id": "i_l2_2",
+        "title": "텍스트 통계 분석기",
+        "description": "문장의 단어수, 공백수, 문자수를 분석하는 함수를 구현합니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/long/i_l2_2.py"
+      },
+      {
+        "id": "i_l2_3",
+        "title": "구구단 함수 모듈",
+        "description": "구구단 출력을 함수로 분리하여 모듈화합니다.",
+        "category": "functions",
+        "levelGroup": 2,
+        "file": "intermediate/long/i_l2_3.py"
+      },
+      {
+        "id": "i_l3_1",
+        "title": "숫자 리스트 분석기",
+        "description": "숫자 리스트를 짝수/홀수/범위별로 분류하고 통계를 내는 프로그램입니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "intermediate/long/i_l3_1.py"
+      },
+      {
+        "id": "i_l3_2",
+        "title": "성적 관리 시스템",
+        "description": "딕셔너리를 활용한 성적 관리 및 순위 정렬 시스템입니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "intermediate/long/i_l3_2.py"
+      },
+      {
+        "id": "i_l3_3",
+        "title": "학생 정보 분석기",
+        "description": "학생 정보 딕셔너리 리스트를 성인/미성년자로 분류합니다.",
+        "category": "data_structures",
+        "levelGroup": 3,
+        "file": "intermediate/long/i_l3_3.py"
+      },
+      {
+        "id": "i_l4_1",
+        "title": "가장 긴 단어 찾기",
+        "description": "텍스트에서 가장 긴 단어를 찾고 모든 단어를 분석합니다.",
+        "category": "strings",
+        "levelGroup": 4,
+        "file": "intermediate/long/i_l4_1.py"
+      },
+      {
+        "id": "i_l4_2",
+        "title": "문자 빈도수 분석",
+        "description": "텍스트의 각 문자가 몇 번 나타나는지 빈도수를 분석합니다.",
+        "category": "strings",
+        "levelGroup": 4,
+        "file": "intermediate/long/i_l4_2.py"
+      },
+      {
+        "id": "i_l4_3",
+        "title": "이메일 도메인 통계",
+        "description": "이메일 리스트에서 도메인별 개수를 집계합니다.",
+        "category": "strings",
+        "levelGroup": 4,
+        "file": "intermediate/long/i_l4_3.py"
+      },
+      {
+        "id": "i_l5_1",
+        "title": "소수 찾기 알고리즘",
+        "description": "에라토스테네스의 체 알고리즘으로 소수를 찾습니다.",
+        "category": "algorithms",
+        "levelGroup": 5,
+        "file": "intermediate/long/i_l5_1.py"
+      },
+      {
+        "id": "i_l5_2",
+        "title": "중복 제거 및 정렬",
+        "description": "리스트에서 중복을 제거하고 정렬하는 알고리즘입니다.",
+        "category": "algorithms",
+        "levelGroup": 5,
+        "file": "intermediate/long/i_l5_2.py"
+      },
+      {
+        "id": "i_l5_3",
+        "title": "선택 정렬 알고리즘",
+        "description": "선택 정렬 알고리즘을 단계별로 구현하고 과정을 출력합니다.",
+        "category": "algorithms",
+        "levelGroup": 5,
+        "file": "intermediate/long/i_l5_3.py"
+      }
+    ]
+  },
+  "advanced": {
+    "short": [
+      {
+        "id": "a_s1_1",
+        "title": "pandas DataFrame 생성",
+        "description": "pandas를 사용하여 딕셔너리로부터 DataFrame을 생성하고 출력합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/short/a_s1_1.py"
+      },
+      {
+        "id": "a_s1_2",
+        "title": "DataFrame 평균값 계산",
+        "description": "pandas DataFrame의 특정 컬럼에서 평균값을 계산합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/short/a_s1_2.py"
+      },
+      {
+        "id": "a_s1_3",
+        "title": "DataFrame 필터링",
+        "description": "pandas DataFrame에서 조건에 맞는 데이터만 필터링합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/short/a_s1_3.py"
+      },
+      {
+        "id": "a_s2_1",
+        "title": "numpy 배열 통계",
+        "description": "numpy 배열의 평균과 표준편차를 계산합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/short/a_s2_1.py"
+      },
+      {
+        "id": "a_s2_2",
+        "title": "numpy 배열 변형",
+        "description": "numpy의 arange와 reshape을 사용하여 배열을 변형합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/short/a_s2_2.py"
+      },
+      {
+        "id": "a_s2_3",
+        "title": "numpy 배열 인덱싱",
+        "description": "numpy 배열에서 특정 조건의 요소를 인덱싱합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/short/a_s2_3.py"
+      },
+      {
+        "id": "a_s3_1",
+        "title": "선형회귀 모델 학습",
+        "description": "sklearn을 사용하여 선형회귀 모델을 학습시킵니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/short/a_s3_1.py"
+      },
+      {
+        "id": "a_s3_2",
+        "title": "선형회귀 예측",
+        "description": "학습된 선형회귀 모델로 새로운 데이터를 예측합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/short/a_s3_2.py"
+      },
+      {
+        "id": "a_s3_3",
+        "title": "의사결정트리 분류",
+        "description": "sklearn으로 의사결정트리 분류기를 학습시킵니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/short/a_s3_3.py"
+      },
+      {
+        "id": "a_s4_1",
+        "title": "결측값 확인",
+        "description": "pandas DataFrame에서 결측값(NaN)을 확인합니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/short/a_s4_1.py"
+      },
+      {
+        "id": "a_s4_2",
+        "title": "결측값 채우기",
+        "description": "pandas DataFrame의 결측값을 평균값으로 채웁니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/short/a_s4_2.py"
+      },
+      {
+        "id": "a_s4_3",
+        "title": "결측값 제거",
+        "description": "pandas DataFrame에서 결측값이 있는 행을 제거합니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/short/a_s4_3.py"
+      },
+      {
+        "id": "a_s5_1",
+        "title": "matplotlib 선 그래프",
+        "description": "matplotlib을 사용하여 기본 선 그래프를 그립니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/short/a_s5_1.py"
+      },
+      {
+        "id": "a_s5_2",
+        "title": "matplotlib 막대 그래프",
+        "description": "matplotlib을 사용하여 막대 그래프를 그립니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/short/a_s5_2.py"
+      },
+      {
+        "id": "a_s5_3",
+        "title": "matplotlib 산점도",
+        "description": "matplotlib을 사용하여 산점도를 그립니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/short/a_s5_3.py"
+      }
+    ],
+    "medium": [
+      {
+        "id": "a_m1_1",
+        "title": "데이터 시각화와 통계",
+        "description": "pandas로 데이터를 처리하고 matplotlib으로 막대 그래프를 그려 평균선을 추가합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/medium/a_m1_1.py"
+      },
+      {
+        "id": "a_m1_2",
+        "title": "DataFrame 그룹핑",
+        "description": "pandas DataFrame을 그룹별로 나누어 집계 연산을 수행합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/medium/a_m1_2.py"
+      },
+      {
+        "id": "a_m1_3",
+        "title": "DataFrame 조인",
+        "description": "두 개의 pandas DataFrame을 키로 조인하여 데이터를 합칩니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/medium/a_m1_3.py"
+      },
+      {
+        "id": "a_m2_1",
+        "title": "numpy 다차원 배열 처리",
+        "description": "numpy로 다차원 배열을 생성하고 축별 통계를 계산합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/medium/a_m2_1.py"
+      },
+      {
+        "id": "a_m2_2",
+        "title": "numpy 배열 연산",
+        "description": "numpy 배열 간의 산술 연산과 브로드캐스팅을 수행합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/medium/a_m2_2.py"
+      },
+      {
+        "id": "a_m2_3",
+        "title": "numpy 선형대수",
+        "description": "numpy를 사용하여 행렬의 곱셈과 전치를 계산합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/medium/a_m2_3.py"
+      },
+      {
+        "id": "a_m3_1",
+        "title": "의사결정트리 분류기",
+        "description": "iris 데이터셋으로 의사결정트리 분류기를 학습하고 정확도를 평가합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/medium/a_m3_1.py"
+      },
+      {
+        "id": "a_m3_2",
+        "title": "k-평균 클러스터링",
+        "description": "sklearn으로 k-평균 클러스터링을 수행하고 결과를 시각화합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/medium/a_m3_2.py"
+      },
+      {
+        "id": "a_m3_3",
+        "title": "다항식 회귀",
+        "description": "sklearn으로 다항식 특성을 생성하여 다항식 회귀를 수행합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/medium/a_m3_3.py"
+      },
+      {
+        "id": "a_m4_1",
+        "title": "결측값 보간",
+        "description": "pandas DataFrame의 결측값을 다양한 방법으로 보간합니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/medium/a_m4_1.py"
+      },
+      {
+        "id": "a_m4_2",
+        "title": "이상치 탐지",
+        "description": "통계적 방법으로 데이터의 이상치를 탐지하고 제거합니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/medium/a_m4_2.py"
+      },
+      {
+        "id": "a_m4_3",
+        "title": "데이터 정규화",
+        "description": "sklearn으로 데이터를 표준화하고 정규화합니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/medium/a_m4_3.py"
+      },
+      {
+        "id": "a_m5_1",
+        "title": "다중 그래프 시각화",
+        "description": "matplotlib으로 여러 개의 그래프를 하나의 그림에 그립니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/medium/a_m5_1.py"
+      },
+      {
+        "id": "a_m5_2",
+        "title": "히트맵 시각화",
+        "description": "seaborn으로 상관관계 히트맵을 생성합니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/medium/a_m5_2.py"
+      },
+      {
+        "id": "a_m5_3",
+        "title": "분포 시각화",
+        "description": "seaborn으로 데이터의 분포를 히스토그램과 박스플롯으로 시각화합니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/medium/a_m5_3.py"
+      }
+    ],
+    "long": [
+      {
+        "id": "a_l1_1",
+        "title": "학생 성적 데이터 분석",
+        "description": "pandas로 학생 성적 데이터를 분석하고 matplotlib으로 시각화하는 종합 프로젝트입니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/long/a_l1_1.py"
+      },
+      {
+        "id": "a_l1_2",
+        "title": "판매 데이터 분석 시스템",
+        "description": "pandas로 판매 데이터를 분석하고 트렌드를 파악하는 시스템입니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/long/a_l1_2.py"
+      },
+      {
+        "id": "a_l1_3",
+        "title": "웹 트래픽 분석 도구",
+        "description": "pandas로 웹 트래픽 로그를 분석하고 인사이트를 도출합니다.",
+        "category": "data_analysis",
+        "levelGroup": 1,
+        "file": "advanced/long/a_l1_3.py"
+      },
+      {
+        "id": "a_l2_1",
+        "title": "지점별 매출 분석",
+        "description": "numpy로 다차원 매출 데이터를 분석하고 matplotlib으로 시각화합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/long/a_l2_1.py"
+      },
+      {
+        "id": "a_l2_2",
+        "title": "신호 처리 시뮬레이션",
+        "description": "numpy로 디지털 신호를 생성하고 필터링하는 시뮬레이션입니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/long/a_l2_2.py"
+      },
+      {
+        "id": "a_l2_3",
+        "title": "수치 해석 알고리즘",
+        "description": "numpy로 수치 적분과 미분을 계산하는 알고리즘을 구현합니다.",
+        "category": "scientific_computing",
+        "levelGroup": 2,
+        "file": "advanced/long/a_l2_3.py"
+      },
+      {
+        "id": "a_l3_1",
+        "title": "iris 데이터 분석 프로젝트",
+        "description": "iris 데이터셋으로 전체 머신러닝 파이프라인을 구축하고 모델을 평가합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/long/a_l3_1.py"
+      },
+      {
+        "id": "a_l3_2",
+        "title": "고객 분류 모델",
+        "description": "고객 데이터로 분류 모델을 구축하고 성능을 비교 분석합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/long/a_l3_2.py"
+      },
+      {
+        "id": "a_l3_3",
+        "title": "시계열 예측 모델",
+        "description": "시계열 데이터로 예측 모델을 구축하고 성능을 평가합니다.",
+        "category": "machine_learning",
+        "levelGroup": 3,
+        "file": "advanced/long/a_l3_3.py"
+      },
+      {
+        "id": "a_l4_1",
+        "title": "데이터 전처리 파이프라인",
+        "description": "실제 데이터의 결측값, 이상치, 중복값을 처리하는 종합 전처리 파이프라인입니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/long/a_l4_1.py"
+      },
+      {
+        "id": "a_l4_2",
+        "title": "텍스트 데이터 정제",
+        "description": "텍스트 데이터의 노이즈를 제거하고 정제하는 프로그램입니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/long/a_l4_2.py"
+      },
+      {
+        "id": "a_l4_3",
+        "title": "데이터 품질 검증 시스템",
+        "description": "데이터의 품질을 검증하고 리포트를 생성하는 시스템입니다.",
+        "category": "data_cleaning",
+        "levelGroup": 4,
+        "file": "advanced/long/a_l4_3.py"
+      },
+      {
+        "id": "a_l5_1",
+        "title": "통계 시각화 대시보드",
+        "description": "seaborn과 matplotlib으로 다양한 통계 차트를 포함한 대시보드를 생성합니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/long/a_l5_1.py"
+      },
+      {
+        "id": "a_l5_2",
+        "title": "인터랙티브 시각화",
+        "description": "plotly로 인터랙티브한 차트와 그래프를 생성합니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/long/a_l5_2.py"
+      },
+      {
+        "id": "a_l5_3",
+        "title": "지리 정보 시각화",
+        "description": "geopandas로 지리 정보를 시각화하고 지도 위에 데이터를 표시합니다.",
+        "category": "data_visualization",
+        "levelGroup": 5,
+        "file": "advanced/long/a_l5_3.py"
+      }
+    ]
+  }
+}
