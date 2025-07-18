@@ -7,3 +7,7 @@ df = pd.DataFrame({
 
 df["domain"] = df["email"].apply(lambda x: x.split("@")[1])
 print(df)
+
+domain_counts = df["domain"].value_counts()
+print("\n도메인별 개수:")
+print(domain_counts)

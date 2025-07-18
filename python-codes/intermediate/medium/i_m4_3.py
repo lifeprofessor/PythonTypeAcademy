@@ -1,4 +1,7 @@
 fruits = ["apple", "banana", "cherry"]
-if "banana" in fruits:
+has_banana = "banana" in fruits
+before = fruits.copy()
+if has_banana:
     fruits.remove("banana")
-print(fruits)
+after = fruits
+print(after)

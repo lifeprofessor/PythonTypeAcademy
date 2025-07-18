@@ -11,7 +11,14 @@ df = pd.DataFrame({
     "history": np.random.randint(55, 90, 100)
 })
 
+print("데이터프레임 상위 5개 행:")
+print(df.head())
 corr = df.corr()
-sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+print("\n과목 간 상관계수:")
+print(corr.round(2))
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
 plt.title("과목 간 상관관계 히트맵")
+plt.tight_layout()
 plt.show()

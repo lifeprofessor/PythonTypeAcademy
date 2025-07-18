@@ -16,3 +16,9 @@ print("고유 도메인 수:", unique_domains)
 print("가장 많이 사용된 도메인:", most_common)
 print("\n도메인별 개수:")
 print(df["domain"].value_counts())
+
+print("\n도메인별 비율(%):")
+print(round(df["domain"].value_counts(normalize=True) * 100, 1))
+
+naver_users = df[df["domain"] == "naver.com"]
+print("\n네이버 사용자 수:", len(naver_users))

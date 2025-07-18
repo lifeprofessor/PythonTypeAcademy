@@ -10,6 +10,9 @@ def get_primes(limit):
     primes = [i for i, is_prime in enumerate(sieve) if is_prime]
     return primes
 
-primes = get_primes(50)
+limit = 50
+print(f"{limit} 이하의 소수를 계산합니다.")
+primes = get_primes(limit)
+print("소수 개수:", len(primes))
 print("50 이하의 소수:")
 print(primes)

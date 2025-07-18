@@ -1,4 +1,6 @@
 def square(x):
-    return x * x
+    result = x * x
+    return result
 
-print(square(4))
+num = 4
+print(square(num))

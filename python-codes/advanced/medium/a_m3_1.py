@@ -7,4 +7,5 @@ X, y = iris.data, iris.target
 model = DecisionTreeClassifier()
 model.fit(X, y)
 
+predictions = model.predict(X)
 print("정확도:", model.score(X, y))

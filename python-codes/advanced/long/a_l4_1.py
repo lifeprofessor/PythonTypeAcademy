@@ -17,3 +17,8 @@ dropped = df.dropna()
 print("\n평균 채움:", mean_filled.values)
 print("중앙값 채움:", median_filled.values)
 print("결측 제거 후:", dropped.values)
+
+print("\n평균으로 채운 후 평균:", round(mean_filled.mean(), 2))
+print("중앙값으로 채운 후 평균:", round(median_filled.mean(), 2))
+print("결측 제거 후 평균:", round(dropped["score"].mean(), 2))
+print("결측치는 총", df["score"].isna().sum(), "개였습니다.")

@@ -20,3 +20,5 @@ grouped = df.groupby(["gender", "major"])["score"].mean().unstack()
 
 print("성별 및 전공별 평균 점수:")
 print(grouped.round(2))
+print("\n전공 목록:", list(grouped.columns))
+print("성별 목록:", list(grouped.index))

@@ -8,4 +8,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
+y_pred = model.predict(X_test)
+print("예측된 레이블 수:", len(y_pred))
 print("정확도:", model.score(X_test, y_test))

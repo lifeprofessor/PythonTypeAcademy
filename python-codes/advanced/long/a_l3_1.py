@@ -13,7 +13,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 model = DecisionTreeClassifier()
 model.fit(X_train, y_train)
-
 accuracy = model.score(X_test, y_test)
 print("모델 정확도:", accuracy)
 

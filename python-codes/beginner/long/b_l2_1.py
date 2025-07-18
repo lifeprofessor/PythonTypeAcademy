@@ -1,30 +1,20 @@
-print("=== 학생 성적 관리 시스템 ===")
+print("=== 성적 계산기 ===")
 print()
 
-student_name = "김철수"
-korean = 85
-english = 92
-math = 78
-science = 90
-social = 88
+kor = 90
+eng = 88
+math = 85
+sci = 92
 
-subjects = ["국어", "영어", "수학", "과학", "사회"]
-scores = [korean, english, math, science, social]
+total = kor + eng + math + sci
+average = total / 4
 
-total = sum(scores)
-average = total / len(scores)
+print("총점:", total)
+print("평균:", average)
 
-print(f"학생 이름: {student_name}")
-print("-" * 25)
-for i in range(len(subjects)):
-    print(f"{subjects[i]}: {scores[i]:3d}점")
-print("-" * 25)
-print(f"총점: {total:3d}점")
-print(f"평균: {average:5.1f}점")
-print()
 if average >= 90:
-    print("🏆 우수 학생입니다!")
+    print("우수한 성적입니다!")
 elif average >= 80:
-    print("👍 양호한 성적입니다.")
+    print("좋은 성적이에요!")
 else:
-    print("📚 더 열심히 공부해요!") 
+    print("더 노력해봅시다.")

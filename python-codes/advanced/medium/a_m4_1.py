@@ -8,3 +8,6 @@ df = pd.DataFrame({
 
 df_filled = df.fillna(df.mean())
 print(df_filled)
+
+print("\n결측치 처리 여부 확인:")
+print(df_filled.isnull().sum())

@@ -1,4 +1,6 @@
 def is_even(n):
-    return n % 2 == 0
+    result = n % 2 == 0
+    return result
 
-print(is_even(7))
+num = 7
+print(is_even(num))
