@@ -17,8 +17,8 @@ summary = (
 print(summary)
 
 summary["sum"].plot(kind="bar", color="orange")
-plt.title("상품별 매출 총액")
-plt.ylabel("총매출")
+plt.title("Total Sales by Product")
+plt.ylabel("Total Revenue")
 plt.xticks(rotation=0)
 plt.tight_layout()
 plt.show()

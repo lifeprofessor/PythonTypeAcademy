@@ -14,11 +14,11 @@ df = pd.DataFrame({
 
 plt.figure(figsize=(6, 4))
 sns.boxplot(x="gender", y="score", data=df)
-plt.title("성별 점수 Boxplot")
+plt.title("Score Distribution by Gender (Boxplot)")
 
 plt.figure(figsize=(6, 4))
 sns.violinplot(x="gender", y="score", data=df)
-plt.title("성별 점수 Violinplot")
+plt.title("Score Distribution by Gender (Violinplot)")
 
 plt.tight_layout()
 plt.show()

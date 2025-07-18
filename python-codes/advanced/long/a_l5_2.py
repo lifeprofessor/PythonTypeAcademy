@@ -19,6 +19,6 @@ print(corr.round(2))
 
 plt.figure(figsize=(8, 6))
 sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-plt.title("과목 간 상관관계 히트맵")
+plt.title("Subject Correlation Heatmap")
 plt.tight_layout()
 plt.show()

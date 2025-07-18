@@ -12,12 +12,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-print("기울기:", model.coef_[0])
-print("절편:", model.intercept_)
+print("Slope:", model.coef_[0])
+print("Intercept:", model.intercept_)
 print("R² score:", model.score(X_test, y_test))
 
-plt.scatter(X_test, y_test, color="blue", label="실제값")
-plt.plot(X_test, model.predict(X_test), color="red", label="예측선")
-plt.title("당뇨병 데이터 선형 회귀 (BMI)")
+plt.scatter(X_test, y_test, color="blue", label="Actual")
+plt.plot(X_test, model.predict(X_test), color="red", label="Prediction")
+plt.title("Linear Regression on Diabetes Dataset (BMI)")
 plt.legend()
 plt.show()
